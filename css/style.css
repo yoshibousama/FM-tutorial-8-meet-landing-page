@@ -9,18 +9,24 @@
   --clr-5: #8fe3f9;
   --clr-6: #d9b8ff;
   --clr-7: #fafafa;
+  --clr-8: #71c0d4;
+  --clr-9: #b18bdd;
   --ff: "Red Hat Display", sans-serif;
   --fs-16: 16px;
   --fs-18: 18px;
   --fs-40: 40px;
   --fs-64: 64px;
+  --fw-500: 500;
+  --fw-900: 900;
   --radius: 29px;
 }
 /* ***************************
         lAYOUT 
 ******************************/
+html,
 body {
   font-family: var(--ff);
+  overflow-x: hidden;
 }
 .wrapper {
   max-width: 90rem;
@@ -30,6 +36,92 @@ body {
   width: 80%;
   margin-inline: auto;
 }
+.header {
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  text-align: center;
+}
+.hero::after {
+  content: "2";
+  height: 56px;
+  width: 56px;
+  margin: 0 auto;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  color: var(--clr-4);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__img__center {
+  background-image: url("../assets/tablet/image-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 9.5rem;
+  margin-bottom: 2.9rem;
+}
+.hero__text {
+  max-width: 20.4rem;
+}
+.hero__text h1 {
+  color: var(--clr-3);
+  font-size: var(--fs-40);
+  font-weight: var(--fw-900);
+  line-height: 2.7rem;
+  margin-bottom: 24px;
+}
+.hero__text p {
+  color: var(--clr-4);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
+  line-height: 26px;
+  margin-bottom: 32px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  text-decoration: none;
+  color: var(--clr-7);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-900);
+  line-height: 26px;
+  border-radius: var(--radius);
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+.btn__green {
+  background-color: var(--clr-1);
+  width: 193px;
+  padding: 1rem 40px;
+}
+.btn__green span {
+  color: var(--clr-5);
+}
+.btn__green:hover {
+  background-color: var(--clr-8);
+}
+.btn__purple {
+  background-color: var(--clr-2);
+  width: 139px;
+  padding: 1rem 19px;
+}
+.btn__purple:hover {
+  background-color: var(--clr-9);
+}
+
 /* ***************************
         MEDIAQUERIES 
 ******************************/
