@@ -14,6 +14,7 @@
   --ff: "Red Hat Display", sans-serif;
   --fs-16: 16px;
   --fs-18: 18px;
+  --fs-32: 32px;
   --fs-40: 40px;
   --fs-64: 64px;
   --fw-500: 500;
@@ -36,31 +37,23 @@ body {
   width: 80%;
   margin-inline: auto;
 }
+/* ***************************
+        HEADER 
+******************************/
 .header {
   height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* ***************************
+        HERO SECTION
+******************************/
 .hero {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   text-align: center;
-}
-.hero::after {
-  content: "2";
-  height: 56px;
-  width: 56px;
-  margin: 0 auto;
-  border: 1px solid rgba(135, 135, 157, 0.25);
-  color: var(--clr-4);
-  font-size: var(--fs-16);
-  font-weight: var(--fw-900);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .hero__img__center {
   background-image: url("../assets/tablet/image-hero.png");
@@ -121,7 +114,192 @@ body {
 .btn__purple:hover {
   background-color: var(--clr-9);
 }
+.bubble__1 {
+  position: relative;
+  height: 268px;
+  padding-top: 64px;
+}
+.bubble__1::before {
+  content: "";
+  height: 84px;
+  width: 1px;
+  margin: 0 auto;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  position: absolute;
+  top: 66px;
+}
+.bubble__1::after {
+  content: "01";
+  height: 56px;
+  width: 56px;
+  margin: 0 auto;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  color: var(--clr-4);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 84px;
+}
+/* ***************************
+GALLERY SECTION 
+******************************/
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  place-items: center;
+  max-width: 327px;
+  justify-content: center;
+}
+.gallery__1,
+.gallery__2,
+.gallery__3,
+.gallery__4 {
+  height: 143px;
+  width: 151px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.gallery__1 {
+  background-image: url("../assets/desktop/image-woman-in-videocall.jpg");
+}
+.gallery__2 {
+  background-image: url("../assets/desktop/image-women-videochatting.jpg");
+}
+.gallery__3 {
+  background-image: url("../assets/desktop/image-men-in-meeting.jpg");
+}
+.gallery__4 {
+  background-image: url("../assets/desktop/image-man-texting.jpg");
+}
+
+/* ***************************
+        DETAIL SECTION 
+******************************/
+.detail {
+  margin-top: 64px;
+  text-align: center;
+}
+.detail h3 {
+  color: var(--clr-1);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-900);
+  line-height: 26px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+.detail h2 {
+  color: var(--clr-3);
+  font-size: var(--fs-32);
+  font-weight: var(--fw-900);
+  line-height: 36px;
+  margin-bottom: 32px;
+}
+.detail p {
+  color: var(--clr-4);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
+  line-height: 26px;
+}
+.bubble__2 {
+  position: relative;
+  height: 176px;
+  padding-top: 64px;
+}
+.bubble__2::before {
+  content: "";
+  height: 84px;
+  width: 1px;
+  margin: 0 auto;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  position: absolute;
+  top: 66px;
+}
+.bubble__2::after {
+  content: "02";
+  height: 56px;
+  width: 56px;
+  margin: 0 auto;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  color: var(--clr-4);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 84px;
+  z-index: 10;
+  background-color: var(--clr-7);
+}
+/* ***************************
+        FOOTER 
+******************************/
+.footer {
+  background-color: var(--clr-1);
+  width: 100%;
+  height: 428px;
+  background-image: url("../assets/mobile/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  text-align: center;
+}
+.footer h2 {
+  color: var(--clr-7);
+  font-size: var(--fs-32);
+  font-weight: var(--fw-900);
+  line-height: 36px;
+  padding-top: 64px;
+  padding-bottom: 24px;
+}
+.footer p {
+  color: var(--clr-7);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-500);
+  line-height: 26px;
+  padding-bottom: 32px;
+}
+.btn__purple-footer {
+  background-color: var(--clr-2);
+  width: 193px;
+  padding: 1rem 40px;
+  margin: 0 auto;
+}
+.btn__purple-footer span {
+  color: var(--clr-6);
+}
+.btn__purple-footer:hover {
+  background-color: var(--clr-9);
+}
 
 /* ***************************
         MEDIAQUERIES 
 ******************************/
+@media screen and (min-width: 375px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+    max-width: 689px;
+  }
+  .gallery__1,
+  .gallery__2,
+  .gallery__3,
+  .gallery__4 {
+    height: 156px;
+    width: 164px;
+  }
+}
